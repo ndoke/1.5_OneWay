@@ -1,6 +1,24 @@
 package com.training;
 
+/**
+ * {@link OneWay} has methods to test whether a given string is a permutation of a palindrome.
+ * {@link OneWay#isOneEditAwaySeparate(String, String)} tests whether the two strings are
+ * one edit away or not using separate methods.
+ * {@link OneWay#isOneEditAwayCombined(String, String)} tests whether the two strings are
+ * one edit away or not using one combined method.
+ *
+ * @author Nachiket Doke
+ * @since 1.0
+ */
 public class OneWay {
+    /**
+     * Returns true if the two strings are one edit away using separate methods for
+     * equal and unequal length strings
+     *
+     * @param input1 string to be compared
+     * @param input2 string to be compared
+     * @return true if both strings are one edit away
+     */
     public boolean isOneEditAwaySeparate(String input1, String input2) {
         if (isDiffMoreThanTwo(input1, input2)) {
             return false;
@@ -52,6 +70,14 @@ public class OneWay {
         return true;
     }
 
+    /**
+     * Returns true if the two strings are one edit away using combined method for
+     * equal and unequal length strings
+     *
+     * @param input1 string to be compared
+     * @param input2 string to be compared
+     * @return true if both strings are one edit away
+     */
     public boolean isOneEditAwayCombined(String input1, String input2) {
         if (isDiffMoreThanTwo(input1, input2)) {
             return false;
